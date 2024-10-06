@@ -1,0 +1,9 @@
+let sum=0;
+let i=1;
+while(i<=30){
+    if(i%4==0){
+    sum+=i;
+    }
+    i++;
+}
+console.log(sum);

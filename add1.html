@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #image-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+#image-container img {
+  margin: 10px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+}
+    </style>
+</head>
+<body>
+    <div id="image-container"></div>
+<script>
+    // Get the div element
+const imageContainer = document.getElementById('image-container');
+
+// Create an array of image sources
+const imageSources = [
+  'image1.jpg',
+  'image2.jpg',
+  'image3.jpg',
+];
+
+// Loop through the image sources and add them to the div
+imageSources.forEach((source) => {
+  const image = document.createElement('img');
+  image.src = source;
+  image.alt = `Image ${imageSources.indexOf(source) + 1}`;
+  image.width = 200;
+  image.height = 150;
+  image.style.margin = '10px';
+  imageContainer.appendChild(image);
+});
+
+</script>
+    
+</body>
+</html>
